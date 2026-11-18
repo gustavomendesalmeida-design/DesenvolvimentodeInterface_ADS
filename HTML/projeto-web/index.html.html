@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pelada Fácil · Organize seus jogos de futebol</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><div class="logo">⚽ Pelada Fácil</div>
+      <nav><a href="#criar">Criar jogo</a><a href="#jogos">Meus jogos</a><a href="#como">Como funciona</a></nav></div>
+    <h1>Marque o jogo. <span>Confirme a galera.</span> Bola rolando.</h1>
+    <p>Crie partidas, controle a lista de presença, divida o valor da quadra e sorteie os times, tudo em um só lugar.</p>
+    <a class="btn" href="#criar">Criar minha partida</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="stats">
+    <div class="stat"><b id="sJogos">0</b><small>jogos marcados</small></div>
+    <div class="stat"><b id="sJog">0</b><small>jogadores confirmados</small></div>
+    <div class="stat"><b id="sVagas">0</b><small>vagas abertas</small></div>
+  </div>
+
+  <section id="criar">
+    <h2>Criar nova partida</h2>
+    <p class="sub">Preencha os dados e a partida aparece na lista abaixo.</p>
+    <form class="card grid" id="form">
+      <div class="full"><label>Nome da partida<input id="nome" required maxlength="40" placeholder="Ex.: Pelada de sexta"></label></div>
+      <label>Data<input type="date" id="data" required></label>
+      <label>Horário<input type="time" id="hora" required></label>
+      <label>Local<input id="local" required maxlength="50" placeholder="Ex.: Quadra do bairro"></label>
+      <label>Nº de vagas<input type="number" id="vagas" min="2" max="40" value="14" required></label>
+      <label>Valor da quadra (R$)<input type="number" id="valor" min="0" step="0.01" value="140"></label>
+      <div class="full"><button class="btn" type="submit">Criar partida</button></div>
+    </form>
+  </section>
+
+  <section id="jogos">
+    <h2>Meus jogos</h2>
+    <p class="sub">Adicione jogadores, veja o custo por pessoa e sorteie os times.</p>
+    <div id="lista"></div>
+  </section>
+
+  <section id="como">
+    <h2>Como funciona</h2>
+    <p class="sub">Em quatro passos você organiza tudo.</p>
+    <div class="passos">
+      <div class="card passo"><span class="n">1</span><h3>Crie a partida</h3><p>Informe data, horário, local, vagas e valor.</p></div>
+      <div class="card passo"><span class="n">2</span><h3>Chame a galera</h3><p>Use “Copiar convite” e envie no grupo.</p></div>
+      <div class="card passo"><span class="n">3</span><h3>Confirme presenças</h3><p>Quem passa do limite entra na lista de espera.</p></div>
+      <div class="card passo"><span class="n">4</span><h3>Sorteie os times</h3><p>Dois times equilibrados em um clique.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>⚽ Pelada Fácil</strong> · Organize seus jogos de futebol com facilidade</p>
+  <p class="cred">Site criado por <strong>Gustavo Mendes Almeida</strong></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
